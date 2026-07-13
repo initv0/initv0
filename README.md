@@ -20,8 +20,8 @@ Site: **[vkafed.com](https://vkafed.com)** · LinkedIn: **[in/vkafed](https://ww
 
 ## Certifications
 
-- **Kubernetes** — CKA, CKAD & CKS (the full CNCF trifecta, each earned 3×)
-- **Cloud** — AWS Certified Solutions Architect – Professional (×2) · Google Professional Cloud Architect
+- **Kubernetes** — CKA, CKAD & CKS (the full CNCF trifecta)
+- **Cloud** — AWS Certified Solutions Architect – Professional · Google Professional Cloud Architect
 - **Networking & Systems** — Cisco CCNP · Red Hat Certified Engineer (RHCE)
 
 ## Start here — recent writing
