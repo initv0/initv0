@@ -18,6 +18,12 @@ Site: **[vkafed.com](https://vkafed.com)** · LinkedIn: **[in/vkafed](https://ww
 - **Zero Trust platform security** — identity-aware segmentation, policy enforced in the data path
 - **Cloud & multi-region networking** — service meshes, IPv6, high-performance connectivity at scale
 
+## Certifications
+
+- **Kubernetes** — CKA, CKAD & CKS (the full CNCF trifecta, each earned 3×)
+- **Cloud** — AWS Certified Solutions Architect – Professional (×2) · Google Professional Cloud Architect
+- **Networking & Systems** — Cisco CCNP · Red Hat Certified Engineer (RHCE)
+
 ## Start here — recent writing
 
 - **[BGP for the AI Era](https://vkafed.com/bgp-for-the-ai-era-multi-region-routing-for-inference-workloads/)** — anycast + BGP that fails over on real inference SLOs, not process liveness. Ships with a working FRR config and health agent.
