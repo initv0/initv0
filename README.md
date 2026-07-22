@@ -18,6 +18,7 @@ Site: **[vkafed.com](https://vkafed.com)** · LinkedIn: **[in/vkafed](https://ww
 - **BGP and enterprise routing:** anycast, multi-region failover, health-triggered route withdrawal, BFD
 - **AI infrastructure networking:** inference traffic across regions under tight p99 SLOs
 - **Firewalls, Zero Trust, and network security:** identity-aware segmentation, policy enforced in the data path
+- **Cryptography, PKI, and compliance:** key management and public-key infrastructure, plus taking systems through SOC 2, ISO 27001, PCI DSS, FIPS, and GDPR
 - **eBPF and the Linux kernel:** kernel-level observability and security without sidecar overhead
 - **DNS, email, and SMTP infrastructure:** the quiet services everything else depends on
 - **Cloud and multi-region networking:** Kubernetes, service meshes, IPv6, and high-performance connectivity across AWS, Google Cloud, and Azure
