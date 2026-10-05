@@ -1,18 +1,20 @@
 # Val Kafedzhy
 
-**AI Infrastructure Security Architect** · Washington, D.C. · 20+ years
+**AI Infrastructure Security Architect** · enterprise platforms, networks and cloud · Washington, D.C. · 20+ years
 
-I design security for the platforms AI runs on: identity, keys, networks, and the controls an auditor signs off on. Over 20 years I've gone from hosting engineer to cloud architect and CTO, spent nine years on Cisco's email security products, and today I work on security and infrastructure for cloud security services.
+I design and secure the platforms AI runs on, at scale: identity, keys, networks, and the controls an auditor signs off on. 20+ years hands-on: the CTO who built a hosting company's data center from scratch (30,000 customers, 3,000 servers), nine years on Cisco's email security products across 32 data centers (about a million metrics every 10 seconds), and today security and infrastructure for cloud security services.
 
 I write it up at **[vkafed.com](https://vkafed.com)** as reference architectures with working code, honest trade-offs and the failure modes that actually bite. The repos here are the code behind those articles.
 
 ## What I work on
 
-- **PKI and encryption:** CA design with offline roots and hardware keys, mTLS, certificate automation, OpenPGP
-- **Zero trust and network security:** identity-aware segmentation, BGP and anycast, IPv6, eBPF in the data path
-- **Kubernetes and platform security:** GitOps, policy guardrails, runtime security
-- **DNS and email security:** DNSSEC, encrypted DNS, SPF, DKIM, DMARC, MTA-STS and DANE
-- **Compliance:** SOC 2, ISO 27001, PCI DSS, FIPS and GDPR controls
+- **Firewalls, zero trust and network security:** segmentation, policy in the data path, edge and east-west firewalls
+- **Cryptography and PKI:** offline roots, HSM and smart-card keys, mTLS, certificate automation, OpenPGP
+- **eBPF and the Linux kernel:** kernel-level observability and runtime security
+- **DNS, email and SMTP:** DNSSEC, encrypted DNS, SPF, DKIM, DMARC, MTA-STS, DANE
+- **Cloud and multi-region networking:** AWS, Google Cloud and Azure; BGP, anycast, IPv6, multi-region failover
+- **Kubernetes and platform security:** GitOps, policy guardrails, fleets of thousands of servers
+- **Compliance:** SOC 2, ISO 27001, PCI DSS, FIPS and GDPR
 
 **Now building:** an AI inference security reference architecture with a tested lab, covering workload and agent identity, the model supply chain, tool-use boundaries and isolation, published one chapter at a time on vkafed.com.
 
@@ -37,8 +39,8 @@ Personal work, built on my own time and equipment.
 
 ## Certifications
 
-CKA · CKAD · CKS · AWS Solutions Architect Professional · Google Cloud Professional Cloud Architect · Cisco CCNP · Red Hat RHCE
+CKA · CKAD · CKS · AWS Solutions Architect Professional · Google Cloud Professional Cloud Architect · Cisco CCNP · Cisco CCNA · Red Hat RHCE
 
 ## Get in touch
 
-Happy to compare notes on securing AI infrastructure, PKI or zero trust, and open to speaking and press requests: [LinkedIn](https://www.linkedin.com/in/vkafed/) or [vkafed.com/contact](https://vkafed.com/contact/).
+Happy to compare notes on securing AI infrastructure, PKI or zero trust. I take on a small number of [advisory engagements](https://vkafed.com/advisory/), and I'm open to speaking and press requests: [LinkedIn](https://www.linkedin.com/in/vkafed/) or [vkafed.com/contact](https://vkafed.com/contact/).
