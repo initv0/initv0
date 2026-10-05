@@ -1,59 +1,44 @@
 # Val Kafedzhy
 
-**AI Infrastructure & Enterprise Platform Architect** · Washington, D.C. · 20+ years
+**AI Infrastructure Security Architect** · Washington, D.C. · 20+ years
 
-I design the networking, platform, and security layer under large systems, lately under AI at
-scale: routing inference traffic across regions, segmenting workloads with Zero Trust, instrumenting
-the kernel with eBPF, and keeping GPU clusters fast and reachable when a region degrades. I write it
-up with working configs, honest trade-offs, and real failure modes, not vendor slideware.
+I design security for the platforms AI runs on: identity, keys, networks, and the controls an auditor signs off on. Over 20 years I've gone from hosting engineer to cloud architect and CTO, spent nine years on Cisco's email security products, and today I work on security and infrastructure for cloud security services.
 
-This is the durable part of the stack, the foundations AI systems run on. Deep networking, security,
-and platform work where architecture and operational judgment matter more than any single tool, and
-stay valuable as the tooling above keeps changing.
-
-Site: **[vkafed.com](https://vkafed.com)** · LinkedIn: **[in/vkafed](https://www.linkedin.com/in/vkafed/)**
+I write it up at **[vkafed.com](https://vkafed.com)** as reference architectures with working code, honest trade-offs and the failure modes that actually bite. The repos here are the code behind those articles.
 
 ## What I work on
 
-- **BGP and enterprise routing:** anycast, multi-region failover, health-triggered route withdrawal, BFD
-- **AI infrastructure networking:** inference traffic across regions under tight p99 SLOs
-- **Firewalls, Zero Trust, and network security:** identity-aware segmentation, policy enforced in the data path
-- **Cryptography, PKI, and compliance:** key management and public-key infrastructure, plus taking systems through SOC 2, ISO 27001, PCI DSS, FIPS, and GDPR
-- **eBPF and the Linux kernel:** kernel-level observability and security without sidecar overhead
-- **DNS, email, and SMTP infrastructure:** the quiet services everything else depends on
-- **Cloud and multi-region networking:** Kubernetes, service meshes, IPv6, and high-performance connectivity across AWS, Google Cloud, and Azure
+- **PKI and encryption:** CA design with offline roots and hardware keys, mTLS, certificate automation, OpenPGP
+- **Zero trust and network security:** identity-aware segmentation, BGP and anycast, IPv6, eBPF in the data path
+- **Kubernetes and platform security:** GitOps, policy guardrails, runtime security
+- **DNS and email security:** DNSSEC, encrypted DNS, SPF, DKIM, DMARC, MTA-STS and DANE
+- **Compliance:** SOC 2, ISO 27001, PCI DSS, FIPS and GDPR controls
 
-## Certifications
+**Now building:** an AI inference security reference architecture with a tested lab, covering workload and agent identity, the model supply chain, tool-use boundaries and isolation, published one chapter at a time on vkafed.com.
 
-- **Kubernetes:** CKA, CKAD, and CKS (the full CNCF trifecta)
-- **Cloud:** AWS Certified Solutions Architect (Professional), Google Professional Cloud Architect
-- **Networking and Systems:** Cisco CCNP, Red Hat Certified Engineer (RHCE)
+## Start here
 
-## Start here: recent writing
+- **[Zero Trust, Beyond the Buzzword](https://vkafed.com/zero-trust-networking-beyond-the-buzzword-an-enterprise-reference-architecture/):** a vendor-neutral reference architecture with PDP/PEP, SPIFFE identity and a real Cilium policy.
+- **[An offline CA with smart-card key storage](https://vkafed.com/creating-a-new-ca-sha-512-4096-bit-with-pkcs-11-smart-card-storage-and-subordinate-ca/):** a root and subordinate CA with keys on PKCS#11 hardware.
+- **[eBPF in Production](https://vkafed.com/ebpf-in-production-kernel-level-observability-and-security/):** kernel-level observability and security without a sidecar in the data path.
+- **[BGP for the AI Era](https://vkafed.com/bgp-for-the-ai-era-multi-region-routing-for-inference-workloads/):** anycast and BGP that fail over on real inference SLOs, not process liveness.
+- **[The AI Inference Networking Maturity Model](https://vkafed.com/ai-inference-networking-maturity-model/):** five levels and six dimensions for scoring how ready a network is to serve inference.
 
-- **[BGP for the AI Era](https://vkafed.com/bgp-for-the-ai-era-multi-region-routing-for-inference-workloads/):** anycast plus BGP that fails over on real inference SLOs, not process liveness. Ships with a working FRR config and health agent.
-- **[eBPF in Production](https://vkafed.com/ebpf-in-production-kernel-level-observability-and-security/):** kernel-level observability and security without a sidecar in the data path. Runnable samples below.
-- **[Zero Trust, Beyond the Buzzword](https://vkafed.com/zero-trust-networking-beyond-the-buzzword-an-enterprise-reference-architecture/):** a vendor-neutral reference architecture with PDP/PEP, SPIFFE identity, and a real Cilium policy.
-- **[Service Mesh vs eBPF-Native Data Planes](https://vkafed.com/service-mesh-vs-ebpf-native-data-planes-how-to-choose/):** the head-to-head on when sidecars still win.
-- **[IPv6 at Enterprise Scale](https://vkafed.com/ipv6-at-enterprise-scale-a-migration-playbook/):** a migration playbook with a dual-stack core, a real address plan, and NAT64/DNS64.
-- **[The AI Inference Networking Maturity Model](https://vkafed.com/ai-inference-networking-maturity-model/):** five levels, six dimensions for scoring how ready your network is to serve inference.
+Everything else, by topic: [vkafed.com/topics](https://vkafed.com/topics/)
 
-Browse by topic: [Networking & Routing](https://vkafed.com/category/networking-routing/) ·
-[Cloud & Platform Networking](https://vkafed.com/category/cloud-platform-networking/) ·
-[Zero Trust & Platform Security](https://vkafed.com/category/zero-trust-platform-security/) ·
-[AI Infrastructure Networking](https://vkafed.com/category/ai-infrastructure-networking/)
+## Reference repos
 
-## Reference repos (companions to the writing)
+Personal work, built on my own time and equipment.
 
 | Repo | What it is |
 |---|---|
-| **[anycast-bgp-inference-reference](https://github.com/initv0/anycast-bgp-inference-reference)** | FRR/BGP config plus a health agent that ties route advertisement to real inference SLOs (p99 latency, GPU queue depth), with hysteresis to survive BGP dampening. Includes a reproducible Docker and FRR failover benchmark. Companion to the BGP article. |
-| **[ebpf-observability-samples](https://github.com/initv0/ebpf-observability-samples)** | Runnable bpftrace, Tetragon, and Cilium samples for kernel-level observability and security (no sidecars), plus BTF/CO-RE and XDP readiness checks. Companion to the eBPF article. |
+| **[anycast-bgp-inference-reference](https://github.com/initv0/anycast-bgp-inference-reference)** | FRR and BGP config plus a health agent that ties route advertisement to inference SLOs (p99 latency, GPU queue depth), with a failover benchmark harness. |
+| **[ebpf-observability-samples](https://github.com/initv0/ebpf-observability-samples)** | Runnable bpftrace, Tetragon and Cilium samples for kernel-level observability and security, plus CO-RE and XDP readiness checks. |
 
-## Let's talk
+## Certifications
 
-Open to advisory and consulting conversations on multi-region routing, Zero Trust segmentation, and
-the networking layer under AI platforms. Happy to compare notes either way.
+CKA · CKAD · CKS · AWS Solutions Architect Professional · Google Cloud Professional Cloud Architect · Cisco CCNP · Red Hat RHCE
 
-- Site: [vkafed.com](https://vkafed.com)
-- LinkedIn: [linkedin.com/in/vkafed](https://www.linkedin.com/in/vkafed/)
+## Get in touch
+
+Happy to compare notes on securing AI infrastructure, PKI or zero trust, and open to speaking and press requests: [LinkedIn](https://www.linkedin.com/in/vkafed/) or [vkafed.com/contact](https://vkafed.com/contact/).
